@@ -2,6 +2,7 @@ import ESBuild from 'esbuild'
 import config from './esbuild-config'
 import path from 'path'
 import express from 'express'
+import cors from 'cors'
 import { EventEmitter } from 'events'
 
 require('dotenv').config()
@@ -11,6 +12,7 @@ const app = express()
 const emitter = new EventEmitter()
 
 app.use(express.static(path.resolve(__dirname, '..', '..', 'build')))
+app.use(cors())
 
 app.get('/subscribe', (req, res) => {
 	const headers = {

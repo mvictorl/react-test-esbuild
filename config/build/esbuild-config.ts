@@ -17,7 +17,7 @@ const resolveRootFolder = (...segments: string[]) => {
 const config: BuildOptions = {
 	sourceRoot: resolveRootFolder('src'),
 	outdir: resolveRootFolder('build'),
-	entryPoints: [resolveRootFolder('src', 'index.tsx')],
+	entryPoints: [resolveRootFolder('src', 'index.jsx')],
 	// entryNames: 'bundle',
 	entryNames: isDev ? '[dir]/bundle.[name]-[hash]' : 'bundle',
 	allowOverwrite: true,

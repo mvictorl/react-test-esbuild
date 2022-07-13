@@ -1,14 +1,16 @@
 # React template on ESBuild as a module bundler
 
+Add: `npm i -D cors @types/cors`
+
 ____
 
 ## This project are testing [ESBuild](https://esbuild.github.io/) as build tool for React app example by tutorial video from [**Ulbi TV** YouTube-channel](https://www.youtube.com/watch?v=9wFfq5bLCgg).
 
 * Initiate npm-project (generate `package.json` file):
 
-      ```
-      npm init
-      ```
+    ```
+    npm init
+    ```
 
 * Install the following npm packages (along the way):
 
