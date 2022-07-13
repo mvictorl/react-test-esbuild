@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import { Adb as AdbIcon, Menu as MenuIcon } from '@mui/icons-material'
 import {
 	AppBar,
@@ -13,7 +15,6 @@ import {
 	Typography,
 	useMediaQuery
 } from '@mui/material'
-import React, { useState } from 'react'
 
 import AuthIcon from '../auth-icon'
 
@@ -134,13 +135,17 @@ export default function MenuAppBar({ auth }) {
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map(page => (
-							<Button
-								key={page}
-								onClick={handleMenuClick}
-								sx={{ my: 2, color: 'white', display: 'block' }}
-							>
-								{page}
-							</Button>
+							// <Link to={page.toLowerCase()}>
+							<NavLink to={page.toLowerCase()}>
+								<Button
+									key={page}
+									onClick={handleMenuClick}
+									sx={{ my: 2, color: 'white', display: 'block' }}
+								>
+									{page}
+								</Button>
+							</NavLink>
+							// </Link>
 						))}
 					</Box>
 					<AuthIcon auth={auth} />
